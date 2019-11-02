@@ -1,5 +1,7 @@
 package Model;
 
+import androidx.annotation.NonNull;
+
 public class People {
     private String name;
     private int height;
@@ -9,6 +11,9 @@ public class People {
     private String eye_color;
     private String gender;
 
+    public People(){
+
+    }
     public People(String name, int height, int mass, String hair_color, String skin_color, String eye_color, String gender) {
         this.name = name;
         this.height = height;
@@ -73,5 +78,11 @@ public class People {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return name;
     }
 }
